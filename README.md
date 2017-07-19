@@ -35,3 +35,7 @@ the another CLI window will be used to run a simple http serve for your project,
 http-server  -p 6666 -a 127.0.0.1 --cors -o 
 ```
 
+or
+```
+cd dist && http-server  -p 6666 -a 127.0.0.1 --cors -o 
+```
