@@ -3,19 +3,45 @@
 this is a simple CLI tool for TypeScript Projects management.
 
 
+# Dependencies
+
+```
+
+Sublime Text
+Node.js/ npm
+TypeScript
+Git
+
+```
+
+
 # Usage
 
-```
-
-tsp [projectDictionory] [mainClassName] [ProjectName]
+to generate a TypeScript project:
 
 ```
+
+tsp g [projectDirName] [mainClassName] [ProjectName]
+
+```
+
+to run a simple http server for your project:
+
+```
+
+tsp s [projectDirName] [port]
+
+```
+
+`port` should be a number  in range (80,65535).
+
+
 
 # Sample:
 
 ```
 
-tsp  test12 Test12Class Project12
+tsp g test12 Test12Class Project12
 
 ```
 
@@ -23,7 +49,7 @@ it will generate a project in `test12` named `Project12` and  its main Class nam
 ![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot.png)
 
 
-after the project generated,you can do somethig with files in `src`, then open two CLI windows:
+after the project generated,you can do something with files in `src`, then open two CLI windows, execute the following command in a CLI window:
 
 ```
 gulp
@@ -31,14 +57,12 @@ gulp
 it will watch your files.
 
 the another CLI window will be used to run a simple http serve for your project,such as :
+
 ```
-http-server  -p 6666 -a 127.0.0.1 --cors -o 
+tsp g test12 6666
 ```
 
-or
-```
-cd dist && http-server  -p 6666 -a 127.0.0.1 --cors -o 
-```
+tsp will run a http server for your TypeScript project in `test12` and open it in your default browser.
 
 # Homepage
 
