@@ -1,6 +1,6 @@
 # Intro
 
-a simple CLI tool for TypeScript Project management.
+this is a simple CLI tool for TypeScript Projects management.
 
 
 # Usage
