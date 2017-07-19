@@ -59,7 +59,7 @@ it will watch your files.
 the another CLI window will be used to run a simple http serve for your project,such as :
 
 ```
-tsp g test12 6666
+tsp s test12 6666
 ```
 
 tsp will run a http server for your TypeScript project in `test12` and open it in your default browser.
