@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-19 09:22:49
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-20 03:28:25
+* @Last Modified time: 2017-07-20 03:52:29
 */
 
 package main
@@ -58,7 +58,7 @@ func deleteFile(path string) {
 
 func usageTip(){
 
-	printMe("to generate a TypeScript project:\n******\ntsp [projectDirName] [ProjectMainClassName] [ProjectName] \n******\nto run s simple http server for your project \n******\ntsp s [port]\n******\n");
+	printMe("to generate a TypeScript project:\n******\ntsp [projectDirName] [ProjectMainClassName] [ProjectName] \n******\nto run a simple http server for your project \n******\ntsp s [port]\n******\n");
 
 }
 
