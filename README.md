@@ -39,3 +39,7 @@ or
 ```
 cd dist && http-server  -p 6666 -a 127.0.0.1 --cors -o 
 ```
+
+# Homepage
+
+[here](http://coolwp.com/cli-tool-typescript-projects.html)
