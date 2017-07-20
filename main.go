@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-19 09:22:49
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-20 17:16:57
+* @Last Modified time: 2017-07-20 17:21:03
 */
 
 package main
@@ -189,9 +189,6 @@ func doAction (args []string){
 				"echo '/node_modules/*' >>.gitignore",
 				"git init && git config --local core.autocrlf false && git add .  && git commit -m \"init\" ",
 
-				/*
-				从用户输入中获取项目名称
-				 */
 				"echo '#  "+projectName+"' >> README.md",
 
 			}
