@@ -2,24 +2,20 @@
 * @Author: Administrator
 * @Date:   2017-07-19 09:22:49
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-20 16:42:03
+* @Last Modified time: 2017-07-20 17:13:59
 */
 
 package main
 
-/*
-go build && tsp 
- */
 
 import (
 	"fmt"
-	/*"io"*/
     "os"
     "os/exec"
     "strings"
     "path/filepath"
     "strconv"
-/*    _"tsp/utils"*/
+
 )
 
 
@@ -67,48 +63,21 @@ func usageTip(){
 
 /*
 tsp g projectDir MainClassName ProjectName
-
-
  */
-func exeCmd(cmds []string, dirName string ) {
+func exeCmd(cmds []string, dirName string, shFileName string ) {
 
 
 			var(
 				output_path = filepath.Join("./"+ dirName)
-				bash_script = filepath.Join( "_do.sh" )
-			)  
-			os.RemoveAll(output_path)
-			err := os.MkdirAll( output_path, os.ModePerm|os.ModeDir )
-			checkError(err)
-			file, err := os.Create( filepath.Join(output_path, bash_script))
-			checkError(err)
-			defer file.Close()
-			file.WriteString("#!/bin/sh\n")
-			file.WriteString( strings.Join(cmds, "\n"))
-			err = os.Chdir(output_path)
-			checkError(err)
-			out, err := exec.Command("sh", bash_script).Output()
-			checkError(err)
-
-			printMe(string(out))
-
-
-}
-
-
-func runGulp(dirName string){
-
-			var(
-				output_path = filepath.Join("./"+ dirName)
-				bash_script = filepath.Join( "_gulp.sh" )
-			  
-				cmds = [] string{
-					"gulp",
-				}
+				bash_script = filepath.Join( "_"+shFileName+".sh" )
 				shFilePath = filepath.Join(output_path, bash_script)
-			)
-
-			deleteFile(shFilePath)
+			)  
+			if shFileName=="init"{
+				os.RemoveAll(output_path)
+			}else{
+				deleteFile(shFilePath)	
+			}
+			
 
 			err := os.MkdirAll( output_path, os.ModePerm|os.ModeDir )
 			checkError(err)
@@ -121,11 +90,11 @@ func runGulp(dirName string){
 			checkError(err)
 			out, err := exec.Command("sh", bash_script).Output()
 			checkError(err)
-
 			printMe(string(out))
 
 
 }
+
 
 
 func simpleHttpServer(dirName string,  port string){
@@ -152,8 +121,8 @@ func simpleHttpServer(dirName string,  port string){
 			err = os.Chdir(output_path)
 			checkError(err)
 			out, err := exec.Command("sh", bash_script).Output()
-			checkError(err)
 
+			checkError(err)
 			printMe(string(out))
 
 
@@ -227,7 +196,7 @@ func doAction (args []string){
 
 			}
 
-			exeCmd(commands,dirName)
+			exeCmd(commands,dirName,"init")
 
 			printMe("****************done******************")
 			printMe("project in dir "+ dirName +".\n you can run it using:\ntsp s "+ dirName +" 6666")
@@ -254,7 +223,7 @@ func doAction (args []string){
 		case "w":
 		case "gulp":
 
-			runGulp(string(args[1]));
+			doGulp(args)
 
 		case "h":
 		case "help":
@@ -267,7 +236,13 @@ func doAction (args []string){
 
 }
 
+func doGulp(args []string){
 
+	commands := []string{
+		"gulp",
+	}
+	exeCmd(commands, args[1], "gulp")
+}
 
 
 func main() {
@@ -284,24 +259,28 @@ func main() {
 
 		if args[0]=="v"{
 
-			printMe("v1.1.0")
+			printMe("v1.1.1")
 			
+		}
+
+		if args[0]=="w"|| args[0]=="gulp"{
+			doGulp(args)
+
 		}else{
 			usageTip()
 		}
-		
-
-
 	}else{
+
+
+		if args[0]=="w"|| args[0]=="gulp"{
+
+			doGulp(args)
+
+		}else{
+			doAction (args)
+		}
 		
-		doAction (args)
 
 	}
 
 }
-
-/*
-
-go build && tsp  test11 Test11Class 测试项目11
-
-*/
