@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-19 09:22:49
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-20 17:13:59
+* @Last Modified time: 2017-07-20 17:16:57
 */
 
 package main
@@ -168,7 +168,7 @@ func doAction (args []string){
 				/* 
 				/src
 				*/
-				"mkdir src && cd src && touch index.html && echo '<!DOCTYPE html>\n<html lang=\"zh_CN\">\n \t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1\">\n\t\t<title>"+projectName+"</title>\n\t</head>\n\t<body>\n\t\t<p id=\"sayhi-to-ts\">测试 ...</p>\n\t\t<script src=\"bundle.js\"></script>\n\t</body>\n</html>' >> index.html && touch main.ts && echo '/*\n\tThis is the main file.\n*/\nclass "+className+"{ \n\t constructor(){}\n}' >> main.ts && cd ..",
+				"mkdir src && cd src && touch index.html && echo '<!DOCTYPE html>\n<html lang=\"zh_CN\">\n \t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1\">\n\t\t<title>"+projectName+"</title>\n\t</head>\n\t<body>\n\t\t<p id=\"sayhi-to-ts\">"+projectName+" tesing ...</p>\n\t\t<script src=\"bundle.js\"></script>\n\t</body>\n</html>' >> index.html && touch main.ts && echo '/*\n\tThis is the main file.\n*/\nclass "+className+"{ \n\t constructor(){}\n}' >> main.ts && cd ..",
 
 				"mkdir dist",
 				"npm init --y",
