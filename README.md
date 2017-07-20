@@ -33,6 +33,13 @@ tsp s [projectDirName] [port]
 
 ```
 
+to run gulp for your project:
+```
+
+tsp w [projectDirName]
+
+```
+
 `port` should be a number  in range (80,65535).
 
 
