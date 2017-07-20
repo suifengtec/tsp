@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-19 09:22:49
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-20 16:36:41
+* @Last Modified time: 2017-07-20 16:42:03
 */
 
 package main
@@ -61,7 +61,7 @@ func deleteFile(path string) {
 
 func usageTip(){
 
-	printMe("to generate a TypeScript project:\n******\ntsp [projectDirName] [ProjectMainClassName] [ProjectName] \n******\nto run s simple http server for your project \n******\ntsp s [port]\n******\n");
+	printMe("to generate a TypeScript project:\n******\ntsp [projectDirName] [ProjectMainClassName] [ProjectName] \n******\nto run s simple http server for your project: \n******\ntsp s [port]\n******\nto run gulp for your project:\n******\ntsp w [projectDirName]\n******\n");
 
 }
 
