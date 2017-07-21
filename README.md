@@ -53,7 +53,9 @@ tsp g test12 Test12Class Project12
 ```
 
 it will generate a project in `test12` named `Project12` and  its main Class named `Test12Class`:
-![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot.png)
+![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot-1.png)
+![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot-2.png)
+![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot-3.png)
 
 
 after the project generated,you can do something with files in `src`, then open two CLI windows, execute the following command in a CLI window:
