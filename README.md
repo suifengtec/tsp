@@ -78,6 +78,8 @@ tsp s test12 6666
 
 tsp will run a http server for your TypeScript project in `test12` and open it in your default browser.
 
+![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot-4.png)
+
 # Homepage
 
 [here](http://coolwp.com/cli-tool-typescript-projects.html)
