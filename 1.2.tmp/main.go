@@ -16,11 +16,9 @@
 
 go build -o a.exe main.go && a A
 
-a aa bb cc
-
-
-可能有用
-Run a command when files change
+a g aa aaClass 项目AA
+a w aa
+a s aa 6688
 
 
 */
