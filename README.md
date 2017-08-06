@@ -3,7 +3,7 @@
 this is a simple CLI tool for TypeScript Projects management.
 
 
-# Dependencies
+# Usage Dependencies
 
 ```
 
@@ -81,7 +81,7 @@ tsp will run a http server for your TypeScript project in `test12` and open it i
 ![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot-4.png)
 
 
-# Dependencies
+# Dev Dependencies
 
 ```
 
