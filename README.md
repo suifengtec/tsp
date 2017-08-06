@@ -80,6 +80,18 @@ tsp will run a http server for your TypeScript project in `test12` and open it i
 
 ![a screenshot of a TypeScript Project](https://raw.githubusercontent.com/suifengtec/tsp/master/screenshot-4.png)
 
+
+# Dependencies
+
+```
+
+go get -u github.com/Kenshin/cprint
+
+go get -u github.com/spf13/cobra
+
+```
+
+
 # Homepage
 
 [here](http://coolwp.com/cli-tool-typescript-projects.html)
