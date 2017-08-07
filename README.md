@@ -91,6 +91,23 @@ go get -u github.com/spf13/cobra
 ```
 
 
+# For jQuery
+
+uncomment the following code in the `/src/main.ts` file:
+```
+
+    import * as $ from "jquery";
+
+```
+
+then you can use it:
+```
+
+console.log($('#sayhi-to-ts').html());
+
+```
+
+
 # Homepage
 
 [here](http://coolwp.com/cli-tool-typescript-projects.html)
