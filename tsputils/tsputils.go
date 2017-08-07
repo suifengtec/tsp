@@ -2,7 +2,7 @@
 * @Author: suifengtec
 * @Date:   2017-08-06 14:10:57
 * @Last Modified by:   suifengtec
-* @Last Modified time: 2017-08-06 15:05:33
+* @Last Modified time: 2017-08-07 20:25:59
  */
 
 package tsputils2
@@ -154,7 +154,7 @@ func GenerateProject(args []string) {
 		/*
 			/src
 		*/
-		"mkdir src && cd src && touch index.html && echo '<!DOCTYPE html>\n<html lang=\"zh_CN\">\n \t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1\">\n\t\t<link rel=\"icon\" href=\"data:;base64,iVBORw0KGgo=\" type=\"image/x-icon\">\n\t\t<title>" + projectName + "</title>\n\t\t</head>\n\t<body>\n\t\t<p id=\"sayhi-to-ts\">" + projectName + " tesing ...</p>\n\t\t<script src=\"bundle.js\"></script>\n\t</body>\n</html>' >> index.html && touch main.ts && echo '/*\n\tThis is the main file.\n*/\nclass " + className + "{ \n\t constructor(){}\n}' >> main.ts && cd ..",
+		"mkdir src && cd src && touch index.html && echo '<!DOCTYPE html>\n<html lang=\"zh_CN\">\n \t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1\">\n\t\t<link rel=\"icon\" href=\"data:;base64,iVBORw0KGgo=\" type=\"image/x-icon\">\n\t\t<title>" + projectName + "</title>\n\t\t</head>\n\t<body>\n\t\t<p id=\"sayhi-to-ts\">" + projectName + " tesing ...</p>\n\t\t<script src=\"bundle.js\"></script>\n\t</body>\n</html>' >> index.html && touch main.ts && echo '/*\n\tThis is the main file.\n*/\n//import * as $ from 'jquery';\nclass " + className + "{ \n\t constructor(){}\n}' >> main.ts && cd ..",
 
 		"mkdir dist",
 		"npm init --y",
@@ -169,7 +169,7 @@ func GenerateProject(args []string) {
 		comment it when dev.
 		*/
 
-		"npm install  --save-dev gulp && npm install -g gulp-cli && npm install --save-dev browserify tsify vinyl-source-stream  && npm install --save-dev watchify gulp-util && npm i --save-dev typescript gulp gulp-typescript && npm install http-server --save-dev",
+		"npm i  --save-dev gulp && npm i -g gulp-cli && npm i --save-dev browserify tsify vinyl-source-stream  && npm i --save-dev watchify gulp-util && npm i --save-dev typescript gulp gulp-typescript && npm i http-server --save-dev &&npm i --save @types/jquery",
 
 		"echo '/node_modules/*' >>.gitignore",
 		"git init && git config --local core.autocrlf false && git add .  && git commit -m \"init\" ",
