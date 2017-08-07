@@ -2,7 +2,7 @@
 * @Author: suifengtec
 * @Date:   2017-08-06 14:10:57
 * @Last Modified by:   suifengtec
-* @Last Modified time: 2017-08-07 20:25:59
+* @Last Modified time: 2017-08-07 20:36:45
  */
 
 package tsputils2
@@ -18,7 +18,7 @@ import (
 	"strings"
 )
 
-const VERSION string = "1.2.0"
+const VERSION string = "1.2.1"
 
 func ShowVersion() {
 	fmt.Println(VERSION)
@@ -154,7 +154,7 @@ func GenerateProject(args []string) {
 		/*
 			/src
 		*/
-		"mkdir src && cd src && touch index.html && echo '<!DOCTYPE html>\n<html lang=\"zh_CN\">\n \t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1\">\n\t\t<link rel=\"icon\" href=\"data:;base64,iVBORw0KGgo=\" type=\"image/x-icon\">\n\t\t<title>" + projectName + "</title>\n\t\t</head>\n\t<body>\n\t\t<p id=\"sayhi-to-ts\">" + projectName + " tesing ...</p>\n\t\t<script src=\"bundle.js\"></script>\n\t</body>\n</html>' >> index.html && touch main.ts && echo '/*\n\tThis is the main file.\n*/\n//import * as $ from 'jquery';\nclass " + className + "{ \n\t constructor(){}\n}' >> main.ts && cd ..",
+		"mkdir src && cd src && touch index.html && echo '<!DOCTYPE html>\n<html lang=\"zh_CN\">\n \t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1\">\n\t\t<link rel=\"icon\" href=\"data:;base64,iVBORw0KGgo=\" type=\"image/x-icon\">\n\t\t<title>" + projectName + "</title>\n\t\t</head>\n\t<body>\n\t\t<p id=\"sayhi-to-ts\">" + projectName + " tesing ...</p>\n\t\t<script src=\"bundle.js\"></script>\n\t</body>\n</html>' >> index.html && touch main.ts && echo '/*\n\tThis is the main file.\n*/\n//import * as $ from \"jquery\";\nclass " + className + "{ \n\t constructor(){}\n}' >> main.ts && cd ..",
 
 		"mkdir dist",
 		"npm init --y",
