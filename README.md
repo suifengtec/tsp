@@ -61,14 +61,13 @@ it will generate a project in `test12` named `Project12` and  its main Class nam
 after the project generated,you can do something with files in `src`, then open two CLI windows, execute the following command in a CLI window:
 
 ```
-tsp gulp test12
-
-//or
 
 tsp w test12
 
 ```
 it will watch your files.
+
+> Note: you can also change CLI to the project base dir,and execute `gulp` to do so.
 
 the another CLI window will be used to run a simple http serve for your project,such as :
 
