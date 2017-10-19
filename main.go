@@ -12,9 +12,7 @@
 // limitations under the License.
 
 /*
-
 go build -o tsp.exe main.go && tsp
-
 */
 package main
 
