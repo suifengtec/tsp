@@ -2,7 +2,6 @@
 
 this is a simple CLI tool for TypeScript Projects management.
 
-
 # Usage Dependencies
 
 ```
