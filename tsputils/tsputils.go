@@ -2,7 +2,7 @@
 * @Author: suifengtec
 * @Date:   2017-08-06 14:10:57
 * @Last Modified by:   suifengtec
-* @Last Modified time: 2017-08-07 20:36:45
+* @Last Modified time: 2017-10-19 23:53:04
  */
 
 package tsputils2
@@ -18,7 +18,7 @@ import (
 	"strings"
 )
 
-const VERSION string = "1.2.1"
+const VERSION string = "1.2.2"
 
 func ShowVersion() {
 	fmt.Println(VERSION)
